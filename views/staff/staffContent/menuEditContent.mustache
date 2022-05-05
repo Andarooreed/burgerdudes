@@ -1,16 +1,18 @@
 <div class="inner-box menu-box">
-    <u>Mains</u><br />
+    <u>Mains</u><br /><br />
     <ul>
         {{#entries}}
         {{#visible}}
         {{#main}}
         <ul>
-            <li>{{name}}</li>
-            <li>{{description}}</li>
-            <li>{{price}}</li>
-            <li>{{ingredients}}</li>
-            <li>{{allergens}}</li>
-        </ul>
+            <ul>
+                <li>{{name}} - </li>
+                <li>{{description}} - </li>
+                <li>{{price}}</li><br />
+                <li>Ingredients - {{ingredients}}</li><br />
+                <li>Allergens - {{allergens}}</li>
+            </ul>
+        </ul><br />
         {{/main}}
         {{/visible}}
         {{/entries}}
@@ -20,18 +22,20 @@
     No main items.<br /><br />
     {{/visible}}
     {{/entries}}
-    <u>Sides</u><br />
+    <u>Sides</u><br /><br />
     <ul>
         {{#entries}}
         {{#visible}}
         {{#side}}
         <ul>
-            <li>{{name}}</li>
-            <li>{{description}}</li>
-            <li>{{price}}</li>
-            <li>{{ingredients}}</li>
-            <li>{{allergens}}</li>
-        </ul>
+            <ul>
+                <li>{{name}} - </li>
+                <li>{{description}} - </li>
+                <li>{{price}}</li><br />
+                <li>Ingredients - {{ingredients}}</li><br />
+                <li>Allergens - {{allergens}}</li>
+            </ul>
+        </ul><br />
         {{/side}}
         {{/visible}}
         {{/entries}}
@@ -58,7 +62,7 @@
                 </select>
             </div>
 
-            
+
             <input type="submit" class="custom-btn" value="Add item">
         </form>
 
@@ -78,11 +82,11 @@
                 </select>
             </div>
 
-            
+
             <input type="submit" class="custom-btn" value="Remove item">
         </form>
 
-        
+
 
     </div>
 
@@ -103,7 +107,7 @@
                 </select>
             </div>
 
-            
+
             <input type="submit" class="custom-btn" value="Add item">
         </form>
 
@@ -123,7 +127,7 @@
                 </select>
             </div>
 
-            
+
             <input type="submit" class="custom-btn" value="Remove item">
         </form>
     </div>
