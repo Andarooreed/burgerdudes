@@ -1,0 +1,129 @@
+<div class="inner-box menu-box">
+    <u>Mains</u><br />
+    <ul>
+        {{#entries}}
+        {{#visible}}
+        {{#main}}
+        <ul>
+            <li>{{name}}</li>
+            <li>{{description}}</li>
+            <li>{{price}}</li>
+            <li>{{ingredients}}</li>
+            <li>{{allergens}}</li>
+        </ul>
+        {{/main}}
+        {{/visible}}
+        {{/entries}}
+    </ul>
+    {{^entries}}
+    {{^visible}}
+    No main items.<br /><br />
+    {{/visible}}
+    {{/entries}}
+    <u>Sides</u><br />
+    <ul>
+        {{#entries}}
+        {{#visible}}
+        {{#side}}
+        <ul>
+            <li>{{name}}</li>
+            <li>{{description}}</li>
+            <li>{{price}}</li>
+            <li>{{ingredients}}</li>
+            <li>{{allergens}}</li>
+        </ul>
+        {{/side}}
+        {{/visible}}
+        {{/entries}}
+    </ul>
+    {{^entries}}
+    {{^visible}}
+    No main items.
+    {{/visible}}
+    {{/entries}}
+    <div class="inner-box first-box">
+        <u>Add item to Mains</u><br /><br />
+        <form method="POST" action="/add-dish-to-menu">
+
+            <div class="form-group">
+
+
+                <label for="name" class="login-label">
+                    Name
+                </label>
+                <select name="name" id="name">
+                    {{#entries}}{{^visible}}{{#main}}
+                    <option value="{{name}}">{{name}}</option>
+                    {{/main}}{{/visible}}{{/entries}}
+                </select>
+            </div>
+
+            
+            <input type="submit" class="custom-btn" value="Add item">
+        </form>
+
+        <u>Remove item from Mains</u><br /><br />
+        <form method="POST" action="/remove-dish-from-menu">
+
+            <div class="form-group">
+
+
+                <label for="name" class="login-label">
+                    Name
+                </label>
+                <select name="name" id="name">
+                    {{#entries}}{{#visible}}{{#main}}
+                    <option value="{{name}}">{{name}}</option>
+                    {{/main}}{{/visible}}{{/entries}}
+                </select>
+            </div>
+
+            
+            <input type="submit" class="custom-btn" value="Remove item">
+        </form>
+
+        
+
+    </div>
+
+    <div class="inner-box last-box">
+        <u>Add item to Sides</u><br /><br />
+        <form method="POST" action="/add-dish-to-menu">
+
+            <div class="form-group">
+
+
+                <label for="name" class="login-label">
+                    Name
+                </label>
+                <select name="name" id="name">
+                    {{#entries}}{{^visible}}{{#side}}
+                    <option value="{{name}}">{{name}}</option>
+                    {{/side}}{{/visible}}{{/entries}}
+                </select>
+            </div>
+
+            
+            <input type="submit" class="custom-btn" value="Add item">
+        </form>
+
+        <u>Remove item from Sides</u><br /><br />
+        <form method="POST" action="/remove-dish-from-menu">
+
+            <div class="form-group">
+
+
+                <label for="name" class="login-label">
+                    Name
+                </label>
+                <select name="name" id="name">
+                    {{#entries}}{{#visible}}{{#side}}
+                    <option value="{{name}}">{{name}}</option>
+                    {{/side}}{{/visible}}{{/entries}}
+                </select>
+            </div>
+
+            
+            <input type="submit" class="custom-btn" value="Remove item">
+        </form>
+    </div>

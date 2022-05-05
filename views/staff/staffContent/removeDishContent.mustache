@@ -1,0 +1,25 @@
+<div class="inner-box first-box">
+    <u>Remove item from system</u><br /><br />
+    <form method="POST" action="/removedish">
+
+        <div class="form-group">
+
+
+            <label for="name" class="login-label">
+                Item
+            </label>
+            <select name="name" id="name">
+                {{#entries}}
+                <option value="{{name}}">{{name}}</option>
+                {{/entries}}
+            </select>
+        </div>
+
+
+        <input type="submit" class="custom-btn" value="Remove item">
+    </form>
+
+
+
+</div>
+</div>
