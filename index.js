@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const port = process.env.PORT || 3000
 require('dotenv').config() // loads data from .env file
 
 const cookieParser = require('cookie-parser')
@@ -21,6 +22,6 @@ app.set('view engine', 'mustache');
 const router = require('./routes/restaurantRoutes');
 app.use('/', router);
 
-app.listen(3000, () => {
+app.listen(port, () => {
     console.log('Server started on port 3000. Ctrl^c to quit.');
 })
