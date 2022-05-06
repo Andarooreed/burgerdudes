@@ -39,20 +39,13 @@ router.post('/remove-dish-from-menu', verify, controller.remove_dish_from_menu);
 router.use(function (req, res) {
     res.status(404);
     res.type('text/plain');
-    res.send('404 Not found.');
+    res.send("Woops! Looks like this page doesn't exist!");
 });
 
 router.use(function (err, req, res, next) {
-    // res.status(500);
-    // res.type('text/plain');
-    // res.send('Internal Server Error.');
-
-    console.error(err);
-    res.status(err.status || 500);
-    res.render('error', {
-        message: err.message,
-        error: err
-    });
+    res.status(500);
+    res.type('text/plain');
+    res.send('Something has gone wrong on the server');
 });
 
 // Make router visible outside of application
