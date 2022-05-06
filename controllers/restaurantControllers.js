@@ -6,7 +6,7 @@ menu.init()
 
 // Main 3 page controls 
 exports.landing_page = function (req, res) {
-    res.render("landing", {
+    res.render("/landing", {
         title: "Home",
         home: "home"
     });
@@ -15,7 +15,7 @@ exports.landing_page = function (req, res) {
 exports.menu_page = function (req, res) {
     menu.getAllEntries()
         .then((list) => {
-            res.render("menu", {
+            res.render("/menu", {
                 title: "Menu",
                 entries: list
             });
@@ -26,7 +26,7 @@ exports.menu_page = function (req, res) {
 }
 
 exports.about_page = function (req, res) {
-    res.render("about", {
+    res.render("/about", {
         title: "About"
     });
 }
