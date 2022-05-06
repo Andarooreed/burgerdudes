@@ -6,7 +6,7 @@ menu.init()
 
 // Main 3 page controls 
 exports.landing_page = function (req, res) {
-    res.render("/landing", {
+    res.render("views/landing", {
         title: "Home",
         home: "home"
     });
