@@ -1,5 +1,5 @@
 body {
-    font-size: 0.8em;
+    font-size: 0.76em;
     background-color: rgba(238, 183, 190, 1);
     color: rgba(3, 34, 157, 1);
     overflow-x: hidden;
@@ -70,7 +70,7 @@ ul li {
 .navbar-right {
     position: relative;
     float: right;
-    bottom: 120px;
+    bottom: 100px;
     left: 20px;
 }
 
