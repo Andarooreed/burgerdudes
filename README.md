@@ -1,4 +1,4 @@
-# BurgerDudes Restuurant
+# BurgerDudes Restaurant
 WAD2 Coursework - Andrew Reid S1111738
 
 How to run
