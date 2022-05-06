@@ -44,3 +44,8 @@ Feature List
 * Working database where dishes can be added and removed as well as flagged for visibility on the menu
 * Dynamic design using mustache so modules can be easily created and added to the front end if needed.
 * Responsive design using bootstrap to fit all screen sizes
+
+Live version
+-------------------------
+The live version of this site can be located at:
+https://burgerdudes.herokuapp.com/
