@@ -56,17 +56,10 @@ exports.loggedIn_landing = function (req, res) {
 
 // Dish edit controls 
 exports.dish_edit_landing = function (req, res) {
-    menu.getAllEntries()
-        .then((list) => {
-            res.render("staff/dishEdit", {
-                title: "Staff Dish Editor",
-                user: "user",
-                entries: list
-            });
-        })
-        .catch((err) => {
-            console.log("promise rejected", err);
-        });
+    res.render("staff/dishEdit", {
+        title: "Staff Dish Editor",
+        user: "user",
+    });
 }
 
 exports.dish_edit_menu = function (req, res) {
