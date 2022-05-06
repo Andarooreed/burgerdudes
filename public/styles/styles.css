@@ -181,22 +181,34 @@ select {
 }
 
 .add-item label {
-    width:150px;
-    clear:left;
-    text-align:right;
-    padding-right:10px;
+    width: 150px;
+    clear: left;
+    text-align: right;
+    padding-right: 10px;
 }
 
 .add-item input {
-    margin-left:2px;
-  }
+    margin-left: 2px;
+}
 
-  .add-item-btn {
-      margin-left: 310px
-  }
+.add-item-btn {
+    margin-left: 310px
+}
 
-  .dash-content a {
+.dash-content a {
     all: unset;
+}
+
+.dash-button {
+    /* margin-top: 130px; */
+    margin-right: 15px;
+    width: 300px;
+    height: 175px;
+    display: inline-block;
+}
+
+.dash-button:hover {
+    text-decoration: underline;
 }
 
 @media (min-width: 1200px) {
@@ -298,20 +310,6 @@ select {
         -webkit-flex-wrap: wrap;
         -moz-flex-wrap: wrap;
         flex-wrap: wrap;
-    }
-
-    
-
-    .dash-button {
-        /* margin-top: 130px; */
-        margin-right: 15px;
-        width: 300px;
-        height: 175px;
-        display: inline-block;
-    }
-
-    .dash-button:hover {
-        text-decoration: underline;
     }
 
 
