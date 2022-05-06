@@ -143,11 +143,11 @@ exports.remove_dish_page = function (req, res) {
 exports.remove_dish = function (req, res) {
     console.log("Removing dish");
     if (!req.body.name) {
-        res.redirect("staff/removeDish");
+        res.redirect("/dishedit/remove-dish");
         return;
     }
     menu.removeDish(req.body.name);
-    res.redirect("staff/removeDish");
+    res.redirect("/dishedit/remove-dish");
 };
 
 exports.menu_edit_page = function (req, res) {
@@ -167,7 +167,7 @@ exports.menu_edit_page = function (req, res) {
 exports.add_dish_to_menu = function (req, res) {
     console.log("Adding dish to menu");
     if (!req.body.name) {
-        response.status(400).send("Dish must have a name.");
+        res.redirect("/menuedit");
         return;
     }
     menu.addDishToMenu(req.body.name);
@@ -183,33 +183,4 @@ exports.remove_dish_from_menu = function (req, res) {
     menu.removeDishFromMenu(req.body.name);
     res.redirect("/menuedit");
 };
-
-
-
-// exports.menu_edit_add_dish = function (req, res) {
-//     menu.getAllEntries()
-//         .then((list) => {
-//             res.render("staff/adsSidedish", {
-//                 title: "Dish Editor",
-//                 user: "user",
-//                 entries: list
-//             });
-//         })
-//         .catch((err) => {
-//             console.log("promise rejected", err);
-//         });
-// }
-// exports.menu_edit_remove_dish = function (req, res) {
-//     menu.getAllEntries()
-//         .then((list) => {
-//             res.render("staff/removesidedish", {
-//                 title: "Dish Editor",
-//                 user: "user",
-//                 entries: list
-//             });
-//         })
-//         .catch((err) => {
-//             console.log("promise rejected", err);
-//         });
-// }
 
