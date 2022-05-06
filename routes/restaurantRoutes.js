@@ -28,7 +28,7 @@ router.post('/dishedit/add-dish/main', verify, controller.add_main_dish);
 router.get("/dishedit/add-dish/side",verify, controller.dish_edit_add_side);
 router.post('/dishedit/add-dish/side', verify, controller.add_side_dish);
 router.get("/dishedit/remove-dish",verify, controller.remove_dish_page);
-router.post('dishedit/removedish', verify, controller.remove_dish);
+router.post('/dishedit/remove-dish', verify, controller.remove_dish);
 
 // // Menu editor routes
 router.get("/menuedit",verify, controller.menu_edit_page);
@@ -42,11 +42,11 @@ router.use(function(req, res) {
     res.send('404 Not found.');
 });
 
-router.use(function(err, req, res, next) {
-    res.status(500);
-    res.type('text/plain');
-    res.send('Internal Server Error.');
-});
+// router.use(function(err, req, res, next) {
+//     res.status(500);
+//     res.type('text/plain');
+//     res.send('Internal Server Error.');
+// });
 
 // Make router visible outside of application
 module.exports = router;
