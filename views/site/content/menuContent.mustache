@@ -1,0 +1,38 @@
+<div class="inner-box first-box menu-box">
+    <u>Mains</u><br />
+    <ul>
+        {{#entries}}
+        {{#visible}}
+        {{#main}}
+        <ul>
+            <li>{{name}} - </li>
+            <li>{{description}} - </li>
+            <li>{{price}}</li><br />
+            <li>Ingredients - {{ingredients}}</li><br />
+            <li>Allergens - {{allergens}}</li>
+        </ul><br />
+        {{/main}}
+        {{/visible}}
+        {{/entries}}
+    </ul>
+
+</div>
+<div class="inner-box first-box menu-box">
+    <u>Sides</u>
+    <ul>
+        {{#entries}}
+        {{#visible}}
+        {{#side}}
+        <ul>
+            <li>{{name}} - </li>
+            <li>{{description}} - </li>
+            <li>{{price}}</li><br />
+            <li>Ingredients - {{ingredients}}</li><br />
+            <li>Allergens - {{allergens}}</li>
+        </ul><br />
+        {{/side}}
+        {{/visible}}
+        {{/entries}}
+    </ul>
+
+</div>
