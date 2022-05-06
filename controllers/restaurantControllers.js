@@ -81,7 +81,7 @@ exports.dish_edit_menu = function (req, res) {
 exports.dish_edit_add_main = function (req, res) {
     menu.getAllEntries()
         .then((list) => {
-            res.render("staff/addmaindish", {
+            res.render("staff/addMainDish", {
                 title: "Staff Dish Editor - Add Main",
                 user: "user",
                 entries: list
@@ -105,7 +105,7 @@ exports.add_main_dish = function (req, res) {
 exports.dish_edit_add_side = function (req, res) {
     menu.getAllEntries()
         .then((list) => {
-            res.render("staff/addsidedish", {
+            res.render("staff/addSideDish", {
                 title: "Staff Dish Editor - Add Side",
                 user: "user",
                 entries: list
