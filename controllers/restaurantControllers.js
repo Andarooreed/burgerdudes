@@ -129,7 +129,7 @@ exports.add_side_dish = function (req, res) {
 exports.remove_dish_page = function (req, res) {
     menu.getAllEntries()
         .then((list) => {
-            res.render("staff/removedish", {
+            res.render("staff/removeDish", {
                 title: "Staff Dish Editor - Remove Dish",
                 user: "user",
                 entries: list
@@ -143,11 +143,11 @@ exports.remove_dish_page = function (req, res) {
 exports.remove_dish = function (req, res) {
     console.log("Removing dish");
     if (!req.body.name) {
-        res.redirect("staff/removedish");
+        res.redirect("staff/removeDish");
         return;
     }
     menu.removeDish(req.body.name);
-    res.redirect("staff/removedish");
+    res.redirect("staff/removeDish");
 };
 
 exports.menu_edit_page = function (req, res) {
