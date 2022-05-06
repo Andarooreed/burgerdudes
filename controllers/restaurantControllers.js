@@ -123,7 +123,7 @@ exports.add_side_dish = function (req, res) {
         return;
     }
     menu.addSideDish(req.body.name, req.body.description, req.body.price, req.body.ingredients, req.body.allergens);
-    res.redirect("/dishEdit");
+    res.redirect("/dishedit");
 };
 
 exports.remove_dish_page = function (req, res) {
@@ -143,11 +143,11 @@ exports.remove_dish_page = function (req, res) {
 exports.remove_dish = function (req, res) {
     console.log("Removing dish");
     if (!req.body.name) {
-        res.redirect("/dishedit/remove-dish");
+        res.redirect("/dishedit");
         return;
     }
     menu.removeDish(req.body.name);
-    res.redirect("/dishedit/remove-dish");
+    res.redirect("/dishedit");
 };
 
 exports.menu_edit_page = function (req, res) {
