@@ -143,11 +143,11 @@ exports.remove_dish_page = function (req, res) {
 exports.remove_dish = function (req, res) {
     console.log("Removing dish");
     if (!req.body.name) {
-        res.redirect("/dishedit");
+        res.redirect("/dishedit/remove-dish");
         return;
     }
     menu.removeDish(req.body.name);
-    res.redirect("/dishedit");
+    res.redirect("/dishedit/remove-dish");
 };
 
 exports.menu_edit_page = function (req, res) {
