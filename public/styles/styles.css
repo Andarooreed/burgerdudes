@@ -195,6 +195,10 @@ select {
       margin-left: 310px
   }
 
+  .dash-content a {
+    all: unset;
+}
+
 @media (min-width: 1200px) {
 
     .fill {
@@ -296,9 +300,7 @@ select {
         flex-wrap: wrap;
     }
 
-    .dash-content a {
-        all: unset;
-    }
+    
 
     .dash-button {
         /* margin-top: 130px; */
